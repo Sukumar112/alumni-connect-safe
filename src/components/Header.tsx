@@ -22,30 +22,34 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/#features" className="text-foreground hover:text-primary transition-colors font-medium">
               Features
             </a>
-            <a href="#events" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/events" className="text-foreground hover:text-primary transition-colors font-medium">
               Events
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact
             </a>
           </nav>
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="gap-2">
-              <User className="h-4 w-4" />
-              Login
-            </Button>
-            <Button variant="accent" className="gap-2">
-              <Users className="h-4 w-4" />
-              Join Network
-            </Button>
+            <a href="/login">
+              <Button variant="outline" className="gap-2">
+                <User className="h-4 w-4" />
+                Login
+              </Button>
+            </a>
+            <a href="/login">
+              <Button variant="accent" className="gap-2">
+                <Users className="h-4 w-4" />
+                Join Network
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,27 +67,31 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
-              <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/#features" className="text-foreground hover:text-primary transition-colors font-medium">
                 Features
               </a>
-              <a href="#events" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/events" className="text-foreground hover:text-primary transition-colors font-medium">
                 Events
               </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About
               </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact
               </a>
               <div className="flex flex-col gap-2 mt-4">
-                <Button variant="outline" className="gap-2">
-                  <User className="h-4 w-4" />
-                  Login
-                </Button>
-                <Button variant="accent" className="gap-2">
-                  <Users className="h-4 w-4" />
-                  Join Network
-                </Button>
+                <a href="/login">
+                  <Button variant="outline" className="gap-2 w-full">
+                    <User className="h-4 w-4" />
+                    Login
+                  </Button>
+                </a>
+                <a href="/login">
+                  <Button variant="accent" className="gap-2 w-full">
+                    <Users className="h-4 w-4" />
+                    Join Network
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>
